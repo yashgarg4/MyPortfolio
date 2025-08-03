@@ -35,6 +35,7 @@ export function Navigation() {
     { id: "experience", label: "Experience" },
     { id: "projects", label: "Projects" },
     { id: "skills", label: "Skills" },
+    { id: "ai-chat", label: "Ask AI" },
     { id: "contact", label: "Contact" },
   ]
 

@@ -1,6 +1,6 @@
 # Overview
 
-This is a personal portfolio website built as a full-stack web application showcasing the work and experience of Yash Garg, a Full-Stack Developer and AI Engineer. The site features multiple sections including hero, about, experience, projects, skills, education, and contact information. It includes a contact form that allows visitors to send messages, which are stored in a database. The application is designed with a modern, responsive interface supporting both light and dark themes.
+This is a personal portfolio website built as a full-stack web application showcasing the work and experience of Yash Garg, a Full-Stack Developer and AI Engineer. The site features multiple sections including hero, about, experience, projects, skills, education, AI chat assistant, and contact information. It includes a contact form and an interactive AI chat feature powered by Gemini 2.5 Pro that allows visitors to ask questions about Yash's background and experience. The application is designed with a modern, responsive interface supporting both light and dark themes.
 
 # User Preferences
 
@@ -46,7 +46,20 @@ Forms use **React Hook Form** with **Zod** resolvers for client-side validation,
 - Real-time validation feedback to users
 - Server-side validation as security fallback
 
+# Recent Changes
+
+## AI Chat Feature (Added: January 2025)
+- Integrated Gemini 2.5 Pro AI chat assistant for interactive resume exploration
+- Added `/api/chat` endpoint for processing user questions about Yash's experience
+- Created responsive chat interface with message history and suggested questions
+- Implemented real-time conversation flow with typing indicators
+- Added comprehensive resume context for accurate AI responses about skills, projects, and experience
+
 # External Dependencies
+
+## AI Integration
+- **@google/genai** - Google Gemini AI SDK for chat functionality
+- **Gemini 2.5 Pro** - Large language model for intelligent resume Q&A
 
 ## Database & ORM
 - **Drizzle ORM** - Type-safe database toolkit with PostgreSQL dialect

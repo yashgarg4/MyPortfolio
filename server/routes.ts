@@ -1,9 +1,10 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
-import { insertContactMessageSchema } from "@shared/schema";
+import { insertContactMessageSchema, chatRequestSchema } from "@shared/schema";
 import { ZodError } from "zod";
 import path from "path";
+import { generateChatResponse } from "./gemini";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Contact form submission
@@ -63,6 +64,41 @@ export async function registerRoutes(app: Express): Promise<Server> {
         success: false, 
         message: "Failed to fetch contact messages" 
       });
+    }
+  });
+
+  // Chat with AI agent about resume
+  app.post("/api/chat", async (req, res) => {
+    try {
+      const validatedData = chatRequestSchema.parse(req.body);
+      
+      // Generate AI response using Gemini
+      const aiResponse = await generateChatResponse(validatedData.message);
+      
+      // Store the chat exchange
+      await storage.createChatMessage({
+        userMessage: validatedData.message,
+        aiResponse: aiResponse,
+      });
+      
+      res.json({ 
+        success: true, 
+        response: aiResponse 
+      });
+    } catch (error) {
+      if (error instanceof ZodError) {
+        res.status(400).json({ 
+          success: false, 
+          message: "Invalid chat message", 
+          errors: error.errors 
+        });
+      } else {
+        console.error("Chat API error:", error);
+        res.status(500).json({ 
+          success: false, 
+          message: "Sorry, I'm having trouble processing your message right now. Please try again." 
+        });
+      }
     }
   });
 
