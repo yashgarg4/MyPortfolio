@@ -133,7 +133,15 @@ export function AiChatSection() {
                           ? 'bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-gray-100'
                           : 'bg-primary text-white'
                       }`}>
-                        <p className="text-sm leading-relaxed whitespace-pre-wrap">{message.content}</p>
+                        <div 
+                          className="text-sm leading-relaxed whitespace-pre-wrap"
+                          dangerouslySetInnerHTML={{
+                            __html: message.content
+                              .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                              .replace(/\*(.*?)\*/g, '<em>$1</em>')
+                              .replace(/\n/g, '<br/>')
+                          }}
+                        />
                         <p className="text-xs opacity-70 mt-1">
                           {message.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
                         </p>
