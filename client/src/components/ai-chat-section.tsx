@@ -36,7 +36,8 @@ export function AiChatSection() {
 
   const chatMutation = useMutation({
     mutationFn: async (message: string): Promise<ChatResponse> => {
-      return apiRequest("POST", "/api/chat", { message }) as Promise<ChatResponse>
+      const response = await apiRequest("POST", "/api/chat", { message })
+      return await response.json()
     },
     onSuccess: (data, userMessage) => {
       const userMsg: ChatMessage = {
