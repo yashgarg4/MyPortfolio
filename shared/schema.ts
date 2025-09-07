@@ -35,7 +35,7 @@ export const insertContactMessageSchema = createInsertSchema(contactMessages).pi
   email: true,
   subject: true,
   message: true,
-});
+}); 
 
 export const insertChatMessageSchema = createInsertSchema(chatMessages).pick({
   userMessage: true,
