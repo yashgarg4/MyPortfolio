@@ -279,7 +279,7 @@ export function ContactSection() {
 
   const handleDownloadResume = () => {
     const link = document.createElement("a");
-    link.href = "/Resume.pdf";
+    link.href = "/api/resume";
     link.download = "Yash_Garg_Resume.pdf";
     document.body.appendChild(link);
     link.click();

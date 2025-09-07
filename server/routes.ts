@@ -1,3 +1,4 @@
+import { fileURLToPath } from "url";
 import dotenv from "dotenv";
 dotenv.config();
 import type { Express } from "express";
@@ -7,6 +8,9 @@ import { insertContactMessageSchema, chatRequestSchema } from "@shared/schema";
 import { ZodError } from "zod";
 import path from "path";
 import { generateChatResponse } from "./gemini";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Contact form submission
@@ -46,12 +50,12 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
   // Resume download endpoint
   app.get("/api/resume", (req, res) => {
-    
+    const filePath = path.join(__dirname, "../client/Resume.pdf");
     res.setHeader('Content-Type', 'application/pdf');
     res.setHeader('Content-Disposition', 'attachment; filename="Yash_Garg_Resume.pdf"');
-    
+    res.sendFile(filePath);
     // Return a simple text response indicating this would be the resume
-    res.status(200).send("Resume download would be available here in production");
+    // res.status(200).send("Resume download would be available here in production");
   });
 
   // Get contact messages (for admin purposes)
