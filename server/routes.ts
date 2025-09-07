@@ -1,3 +1,5 @@
+import dotenv from "dotenv";
+dotenv.config();
 import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
@@ -13,8 +15,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const validatedData = insertContactMessageSchema.parse(req.body);
       const message = await storage.createContactMessage(validatedData);
       
-      // In a real application, you would send an email here
-      // For now, we'll just store the message
+      // In a real application, send an email here
+      // For now, just storing the message
       console.log("New contact message received:", {
         name: message.name,
         email: message.email,
@@ -44,8 +46,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
   // Resume download endpoint
   app.get("/api/resume", (req, res) => {
-    // In a real application, you would serve the actual resume PDF
-    // For now, we'll return a simple response
+    
     res.setHeader('Content-Type', 'application/pdf');
     res.setHeader('Content-Disposition', 'attachment; filename="Yash_Garg_Resume.pdf"');
     

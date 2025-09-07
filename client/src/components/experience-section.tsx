@@ -1,4 +1,4 @@
-import { CheckCircle, Award } from "lucide-react"
+import { CheckCircle, Award } from "lucide-react";
 
 export function ExperienceSection() {
   return (
@@ -11,11 +11,11 @@ export function ExperienceSection() {
               My professional journey in software development and AI engineering
             </p>
           </div>
-          
+
           <div className="relative">
             {/* Timeline line */}
             <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-primary hidden md:block"></div>
-            
+
             <div className="space-y-12">
               {/* Current Position */}
               <div className="relative flex items-start">
@@ -24,38 +24,85 @@ export function ExperienceSection() {
                   <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg">
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                       <div>
-                        <h3 className="text-xl font-semibold text-primary">Associate Engineer</h3>
-                        <h4 className="text-lg font-medium">JioGames | Jio Platforms Limited</h4>
-                        <p className="text-gray-500 dark:text-gray-400">Mumbai</p>
+                        <h3 className="text-xl font-semibold text-primary">
+                          Software Engineer
+                        </h3>
+                        <h4 className="text-lg font-medium">
+                          JioGames | Reliance Jio Platforms Limited
+                        </h4>
+                        <p className="text-gray-500 dark:text-gray-400">
+                          Mumbai
+                        </p>
                       </div>
                       <div className="text-sm bg-primary/10 text-primary px-3 py-1 rounded-full mt-2 md:mt-0">
                         December 2023 – Present
                       </div>
                     </div>
-                    
+
                     <ul className="space-y-3 text-gray-600 dark:text-gray-300">
                       <li className="flex items-start">
                         <CheckCircle className="text-green-500 mr-3 mt-1 flex-shrink-0 w-4 h-4" />
-                        Built cross-platform games by integrating the JioGames SDK to manage ad rendering, event callbacks, and in-game monetization logic.
+                        Built cross-platform games by integrating the JioGames
+                        SDK to manage ad rendering, event callbacks, and in-game
+                        monetization logic.
                       </li>
                       <li className="flex items-start">
                         <CheckCircle className="text-green-500 mr-3 mt-1 flex-shrink-0 w-4 h-4" />
-                        Developed automated browser-based scraping tools to analyze websites across domains for competitive SEO research and extracting game data.
+                        Developed automated browser-based scraping tools to
+                        analyze websites across domains for competitive SEO
+                        research and extracting game data.
                       </li>
                       <li className="flex items-start">
                         <CheckCircle className="text-green-500 mr-3 mt-1 flex-shrink-0 w-4 h-4" />
-                        Created dynamic, responsive ad layouts optimized for various screen orientations, ensuring consistent ad behavior.
+                        Collaborated on JioGames SDK wrapper and plugin
+                        development by enhancing dynamic script loading,
+                        platform detection, ad rendering, and profile fetching
+                        for seamless cross-platform integration.
                       </li>
                       <li className="flex items-start">
                         <CheckCircle className="text-green-500 mr-3 mt-1 flex-shrink-0 w-4 h-4" />
-                        Built responsive UI components to support real-time multiplayer functionality across a wide range of screen sizes and devices.
+                        Maintained and enhanced the JioGames InstaPlay website
+                        end-to-end, delivering new features, debugging issues,
+                        and ensuring smooth deployments.
                       </li>
                       <li className="flex items-start">
                         <CheckCircle className="text-green-500 mr-3 mt-1 flex-shrink-0 w-4 h-4" />
-                        Validated over 150 games, resolving more than 600 issues through in-depth console analysis and hands-on debugging.
+                        Built responsive UI components to support real-time
+                        multiplayer functionality across a wide range of screen
+                        sizes and devices.
+                      </li>
+                      <li className="flex items-start">
+                        <CheckCircle className="text-green-500 mr-3 mt-1 flex-shrink-0 w-4 h-4" />
+                        Collaborated on multiplayer SDK wrapper development,
+                        integrating sockets, event handling, and APIs to enable
+                        real-time multiplayer in WebGL games.
+                      </li>
+                      <li className="flex items-start">
+                        <CheckCircle className="text-green-500 mr-3 mt-1 flex-shrink-0 w-4 h-4" />
+                        Created dynamic, responsive ad layouts optimized for
+                        various screen orientations, ensuring consistent ad
+                        behavior.
+                      </li>
+                      <li className="flex items-start">
+                        <CheckCircle className="text-green-500 mr-3 mt-1 flex-shrink-0 w-4 h-4" />
+                        Validated over 150 games, resolving more than 800 issues
+                        through in-depth console analysis and hands-on
+                        debugging.
+                      </li>
+                      <li className="flex items-start">
+                        <CheckCircle className="text-green-500 mr-3 mt-1 flex-shrink-0 w-4 h-4" />
+                        Authored modular SDK documentation and integration
+                        guides for multiple platforms, accelerating developer
+                        onboarding and reducing technical support overhead.
+                      </li>
+                      <li className="flex items-start">
+                        <CheckCircle className="text-green-500 mr-3 mt-1 flex-shrink-0 w-4 h-4" />
+                        Optimized post-integration workflows, reducing build
+                        iteration cycles to 4–5 per game through structured
+                        debugging and technical guidance.
                       </li>
                     </ul>
-                    
+
                     <div className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-600">
                       <div className="bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 px-3 py-1 rounded-full text-sm inline-flex items-center">
                         <Award className="w-4 h-4 mr-2" />
@@ -70,5 +117,5 @@ export function ExperienceSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }
