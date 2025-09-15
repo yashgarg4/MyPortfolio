@@ -11,12 +11,25 @@ import {
   Globe,
   UserPlus,
   Monitor,
+  Bot,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
 export function ProjectsSection() {
   const projects = [
+    {
+      id: "LinkedIn-Post-Agent",
+      title: "Google ADK",
+      description:
+        "Built an automated pipeline using Google ADK that generates, reviews, and refines LinkedIn posts through iterative AI agents, ensuring professional tone, quality, and style compliance.",
+      technologies: ["Python", "Google ADK", "Gemini LLM", "dotenv"],
+      icon: Bot,
+      gradient: "from-indigo-500 to-pink-500",
+      liveUrl: "https://github.com/yashgarg4/Google_ADK",
+      codeUrl: "https://github.com/yashgarg4/Google_ADK",
+    },
+
     {
       id: "Jira-MCP-Server",
       title: "JIRA MCP Server",
