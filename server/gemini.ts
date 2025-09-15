@@ -37,7 +37,7 @@ CGPA: 9.06
 
 SKILLS:
 Programming Languages: JavaScript, Python, C#, Java, HTML, CSS, TypeScript
-AI & Agentic Systems: LLMs, Agentic AI, CrewAI, Agentic AI, ChromaDB, Pydantic, FastAPI, Langchain
+AI & Agentic Systems: Google ADK, LLMs, Agentic AI, CrewAI, Agentic AI, ChromaDB, Pydantic, FastAPI, Langchain
 Frameworks & Libraries: React, Node.js, Express, Streamlit, Pandas, Playwright
 Web & Backend: RESTful APIs, MongoDB, MySQL, Docker, Kubernetes
 Tools & Platforms: Git, GitHub, VS Code, Unity, Android Studio, Figma
@@ -48,42 +48,48 @@ CERTIFICATIONS:
 - Containers with Docker and Kubernetes
 
 KEY PROJECTS:
-1. Jira MCP Server (FastAPI, Streamlit, CrewAI, Gemini LLM)
+1. LinkedIn Post Generation Agent using Google ADK (Google ADK, Python, Multi-Agent Pipeline, Gemini LLM)
+   - Developed an automated AI pipeline to generate, review, and refine LinkedIn posts for professional quality
+   - Implemented iterative refinement loop with specialized agents for generation, review, and rewriting based on feedback
+   - Built custom tools for character count validation and style compliance to meet LinkedIn standards
+   - Designed a modular architecture enabling easy customization of review criteria and refinement strategies
+
+2. Jira MCP Server (FastAPI, Streamlit, CrewAI, Gemini LLM)
    - Built a natural language interface for Jira using CrewAI agents powered by Google Gemini
    - Enabled actions like creating, searching, validating, commenting, and updating Jira issues via plain English prompts
    - Developed FastAPI backend with structured Context API endpoints for seamless Jira data integration
    - Designed an interactive Streamlit frontend for real-time agent responses and Jira issue management
 
-2. Confluence MCP Server (FastAPI, Streamlit, CrewAI, Gemini LLM)
+3. Confluence MCP Server (FastAPI, Streamlit, CrewAI, Gemini LLM)
    - Built a natural language interface for Confluence using CrewAI agents powered by Google Gemini
    - Implemented key features like creating/updating pages, managing spaces, adding comments, and searching content via plain English prompts
    - Developed FastAPI backend with Context API endpoints to serve structured Confluence data for external tools and agents
    - Designed an interactive Streamlit frontend to provide real-time responses and simplify Confluence knowledge management
 
-3. Agentic RAG IntelliAgent (CrewAI, ChromaDB, Streamlit, Gemini LLM)
+4. Agentic RAG IntelliAgent (CrewAI, ChromaDB, Streamlit, Gemini LLM)
    - Built a Retrieval-Augmented Generation (RAG) system capable of answering queries from private document collections
    - Implemented ingestion pipeline to process and embed multi-format documents (.pdf, .docx, .txt) into a persistent ChromaDB vector store
    - Integrated Google Gemini models for embeddings and conversational responses with both stateless and context-aware interactions
    - Developed multiple interfaces: CLI tool, Streamlit chat app with memory, and an advanced multi-agent Streamlit app orchestrated by CrewAI agents
    - Added evaluation framework to benchmark retrieval quality and agent performance
 
-4. Browser Automation Tool (Python, Playwright, Pandas, Excel)
+5. Browser Automation Tool (Python, Playwright, Pandas, Excel)
    - Built automated web scrapers to extract game details from online portals like CrazyGames
    - Implemented genre-based search to fetch top games and extract metadata including developer, rating, votes, and platform
    - Automated structured data export into timestamped Excel reports for easy analysis and record-keeping
    - Leveraged Playwright for dynamic browser automation and Pandas for efficient data handling
    
-5. AI Travel Planner App (Streamlit, CrewAI, Python, Gemini LLM)
+6. AI Travel Planner App (Streamlit, CrewAI, Python, Gemini LLM)
    - Built an AI-powered travel planner that generates personalized, multi-day itineraries
    - Integrated features like map-based sightseeing, cost estimation, cultural tips, and emergency info
    - Developed interactive UI with multi-agent orchestration using CrewAI and PDF export functionality
 
-6. AI Job Application Assistant (Streamlit, CrewAI, Python, LLMs)
+7. AI Job Application Assistant (Streamlit, CrewAI, Python, LLMs)
    - Built an AI tool to parse resumes and job descriptions, assess match, and generate tailored resumes and cover letters
    - Used CrewAI for multi-agent workflows and integrated Pydantic and LiteLLM for structured orchestration
    - Delivered full-featured Streamlit UI with upload, refinement, and download support
 
-7. AI Financial Analyst Assistant (Python, CrewAI, LLM, Streamlit)
+8. AI Financial Analyst Assistant (Python, CrewAI, LLM, Streamlit)
    - Built an AI-powered system using CrewAI and Gemini LLM to automate financial analysis and company research
    - Designed agentic workflows to extract, process, and synthesize data into structured financial insights
    - Integrated APIs for market data, statements, and news sentiment, delivering reports through interactive UI
