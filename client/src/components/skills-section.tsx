@@ -22,6 +22,7 @@ export function SkillsSection() {
       icon: Brain,
       color: "purple",
       skills: [
+        "Google ADK",
         "LLMs",
         "MCP",
         "RAG",
